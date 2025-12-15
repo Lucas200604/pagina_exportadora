@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>SAFruit</title>
+</head>
+<body>
+    <!-- NAV -->
+    <nav id="sticky-header-visual" class="fixed top-0 w-full p-4 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center text-white">
+
+            <h2 class="text-2xl font-bold">SAFruit</h2>
+
+            <ul class="flex space-x-15">
+                <li><a href="#" class="hover:text-green-400 transition duration-200">Inicio</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-200">Sobre nosotros</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-200">Contacto</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <header class="relative h-[30rem] bg-gray-700 bg-[url('/images/fruta_header.jpg')] bg-cover bg-center text-white flex flex-col justify-center items-center pt-16">
+
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+
+        <div class="relative z-10 text-center">
+            <h1 class="text-6xl font-extrabold mb-4">Frescura Superior, Estándar Mundial</h1>
+            <p class="text-xl">Excelencia orgánica que cruza fronteras.</p>
+        </div>
+    </header>
+
+    <main class="p-8">
+        <h2 class="text-3xl text-zinc-800">Sección principal</h2>
+        <div class="h-[150vh] bg-gray-50 p-8 mt-4">
+            Desplaza hacia abajo para ver cómo el menú pasa de ser transparente a sólido.
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-lime-950 text-white p-6 text-center">
+        <p>© 2025 SAFruit spa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+</html>
