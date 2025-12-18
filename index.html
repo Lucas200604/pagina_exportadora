@@ -1,47 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <title>SAFruit</title>
+    <title>Inicio - SAFruit | Frescura Superior, Estándar Mundial</title>
+    <style>
+        /* Añade padding-top al body para que el contenido no se oculte detrás del nav fijo */
+        body {
+            padding-top: 68px; /* Ajuste basado en el padding p-4 de la nav */
+            font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins al cuerpo */
+        }
+        /* Clases para el efecto de scroll (si utilizas JS) */
+        .scrolled {
+            background-color: rgb(5, 150, 105); /* bg-emerald-600 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <!-- NAV -->
-    <nav id="sticky-header-visual" class="fixed top-0 w-full p-4 z-50 transition-all duration-300">
+    <nav id="sticky-header-visual" class="fixed top-0 w-full p-4 z-50 transition-all duration-300 bg-emerald-500">
         <div class="container mx-auto flex justify-between items-center text-white">
 
-            <h2 class="text-2xl font-bold">SAFruit</h2>
-
-            <ul class="flex space-x-15">
-                <li><a href="#" class="hover:text-green-400 transition duration-200">Inicio</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-200">Sobre nosotros</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-200">Contacto</a></li>
+            <h2 class="text-3xl font-extrabold tracking-wider">SAFruit</h2>
+            
+            <ul class="hidden md:flex space-x-6 text-lg"> 
+                <li><a href="#" class="font-bold border-b-2 border-white pb-1">Inicio</a></li> <li><a href="#sobre-nosotros" class="hover:text-green-200 transition duration-200">Sobre nosotros</a></li>
+                <li><a href="#productos" class="hover:text-green-200 transition duration-200">Productos</a></li>
+                <li><a href="contacto.html" class="hover:text-green-200 transition duration-200">Contacto</a></li>
             </ul>
+            
+            <button class="md:hidden text-white text-2xl">☰</button>
 
         </div>
     </nav>
-    <!-- HEADER -->
-    <header class="relative h-[30rem] bg-gray-700 bg-[url('/images/fruta_header.jpg')] bg-cover bg-center text-white flex flex-col justify-center items-center pt-16">
 
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-
-        <div class="relative z-10 text-center">
-            <h1 class="text-6xl font-extrabold mb-4">Frescura Superior, Estándar Mundial</h1>
-            <p class="text-xl">Excelencia orgánica que cruza fronteras.</p>
+    <header class="relative h-[30rem] bg-gray-700 bg-cover bg-center text-white flex flex-col justify-center items-center shadow-lg"
+            style="background-image: url('/images/fruta_header.jpg');"> <div class="absolute inset-0 bg-black opacity-50"></div> <div class="relative z-10 text-center max-w-4xl px-4">
+            <h1 class="text-6xl sm:text-7xl font-extrabold mb-4 leading-tight">
+                Frescura Superior, Estándar <span class="text-emerald-300">Mundial</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light">
+                Excelencia orgánica que cruza fronteras. Cosechado con pasión, entregado con precisión.
+            </p>
+            <a href="#productos" class="mt-8 inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                Ver Productos
+            </a>
         </div>
     </header>
 
-    <main class="p-8">
-        <h2 class="text-3xl text-zinc-800">Sección principal</h2>
-        <div class="h-[150vh] bg-gray-50 p-8 mt-4">
-            Desplaza hacia abajo para ver cómo el menú pasa de ser transparente a sólido.
+    <section class="bg-stone-100 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-screen-2xl py-12 px-8 mx-auto">
+        <div class="bg-white text-center rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+            <p class="text-5xl font-bold text-emerald-600">45+</p>
+            <p class="text-sm text-gray-500 mt-1">Países de Destino</p>
         </div>
+        <div class="bg-white text-center rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+            <p class="text-5xl font-bold text-emerald-600">1500+</p>
+            <p class="text-sm text-gray-500 mt-1">Exportaciones Exitosas</p>
+        </div>
+        <div class="bg-white text-center rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+            <p class="text-5xl font-bold text-emerald-600">98%</p>
+            <p class="text-sm text-gray-500 mt-1">Satisfacción de Clientes</p>
+        </div>
+        <div class="bg-white text-center rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+            <p class="text-5xl font-bold text-emerald-600">15+</p>
+            <p class="text-sm text-gray-500 mt-1">Años de Experiencia</p>
+        </div>
+        
+    </section>
+
+    <main>
+        
+        <section id="sobre-nosotros" class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-800">Nuestra Promesa de Excelencia</h2>
+                
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    
+                    <div class="md:w-1/2 space-y-6">
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            En **SAFruit**, nuestra misión es conectar el campo con el mundo, garantizando la máxima frescura y calidad en cada envío. Nos especializamos en la exportación de fruta orgánica, cultivada bajo los más estrictos estándares de sostenibilidad.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <li class="font-semibold text-emerald-700">Calidad Certificada:</li> 
+                            <li>Toda nuestra fruta cumple con las certificaciones internacionales más exigentes.</li>
+                            <li class="font-semibold text-emerald-700">Logística de Frío:</li> 
+                            <li>Mantenemos la cadena de frío ininterrumpida desde la cosecha hasta la entrega.</li>
+                            <li class="font-semibold text-emerald-700">Compromiso Sustentable:</li> 
+                            <li>Trabajamos con agricultores que priorizan prácticas orgánicas y responsables.</li>
+                        </ul>
+                        <a href="sobre-nosotros.html" class="mt-6 inline-block text-emerald-600 font-semibold border-b-2 border-emerald-600 hover:text-emerald-800 transition duration-200">
+                            Conoce más sobre nuestra historia →
+                        </a>
+                    </div>
+
+                    <div class="md:w-1/2 w-full mt-8 md:mt-0">
+                        <img src="/images/control_calidad.jpg" alt="Control de Calidad de Fruta Orgánica" class="rounded-2xl shadow-2xl w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="py-20 bg-stone-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-emerald-700">Nuestros Productos Premium</h2>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-screen-xl mx-auto">
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img 
+                                src="/images/productos_cereza.jpg" 
+                                alt="Cerezas frescas" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            >
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-xl font-bold text-emerald-700">Cerezas</p>
+                            <p class="text-sm text-gray-500 mt-1">Variedad Premium</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img 
+                                src="/images/productos_manzanas.jpg" 
+                                alt="Manzanas rojas" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            >
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-xl font-bold text-emerald-700">Manzanas</p>
+                            <p class="text-sm text-gray-500 mt-1">Fuji, Gala, Granny Smith</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img 
+                                src="/images/productos_naranja.jpg" 
+                                alt="Naranjas jugosas" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            >
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-xl font-bold text-emerald-700">Cítricos (Naranjas)</p>
+                            <p class="text-sm text-gray-500 mt-1">Diversas Variedades</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img 
+                                src="/images/productos_uvas.jpg" 
+                                alt="Racimo de uvas" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            >
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-xl font-bold text-emerald-700">Uvas de Mesa</p>
+                            <p class="text-sm text-gray-500 mt-1">Variedad Thompson</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="text-center mt-12">
+                     <a href="contacto.html" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-semibold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
-    <!-- FOOTER -->
-    <footer class="bg-lime-950 text-white p-6 text-center">
-        <p>© 2025 SAFruit spa. Todos los derechos reservados.</p>
+    
+    <footer class="bg-emerald-700 text-white p-6 text-center"> <div class="container mx-auto">
+            <p class="text-sm">&copy; 2025 SAFruit spa. Todos los derechos reservados. | <a href="politicas.html" class="hover:underline">Políticas de Privacidad</a></p>
+        </div>
     </footer>
 </body>
 <script src="js/main.js"></script>
