@@ -1,0 +1,10 @@
+/* Añade padding-top al body para que el contenido no se oculte detrás del nav fijo */
+body {
+    padding-top: 68px; /* Ajuste basado en el padding p-4 de la nav */
+    font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins al cuerpo */
+}
+/* Clases para el efecto de scroll */
+.scrolled {
+    background-color: rgb(5, 150, 105); /* bg-emerald-600 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
