@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Contacto - SAFruit</title>
+    <style>
+        /* Añade un padding superior al cuerpo para que el contenido no se oculte tras el nav fijo */
+        body {
+            padding-top: 64px; /* Ajusta este valor al alto de tu navbar (64px = p-4 + altura de línea) */
+        }
+    </style>
+</head>
+<body>
+    <nav id="sticky-header-visual" class="fixed top-0 w-full p-4 z-50 transition-all duration-300 bg-emerald-500">
+        <div class="container mx-auto flex justify-between items-center text-white">
+
+            <h2 class="text-3xl font-extrabold tracking-wider">SAFruit</h2>
+
+            <ul class="flex space-x-6 text-lg"> 
+                <li><a href="index.html" class="hover:text-green-200 transition duration-200">Inicio</a></li>
+                <li><a href="#" class="hover:text-green-200 transition duration-200">Sobre nosotros</a></li>
+                <li><a href="contacto.html" class="font-bold text-green-200 transition duration-200">Contacto</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main class="min-h-screen bg-gray-50 py-12">
+        <div class="container mx-auto px-4 max-w-lg bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+
+            <h1 class="text-4xl font-bold text-center mb-8 text-emerald-700">Contáctanos</h1>
+            <p class="text-center text-gray-600 mb-8">Estamos encantados de ayudarte. Déjanos tu mensaje y te responderemos a la brevedad.</p>
+
+            <form action="#" method="POST" class="space-y-6"> 
+                <div>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                    <input type="text" name="nombre" id="nombre" required 
+                           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                           placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                    <input type="email" name="email" id="email" required 
+                           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                           placeholder="ejemplo@correo.com">
+                </div>
+
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium text-gray-700">Tu Mensaje/Consulta</label>
+                    <textarea name="mensaje" id="mensaje" rows="4" required 
+                              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                              placeholder="Escribe aquí tu consulta..."></textarea>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Enviar Mensaje" 
+                           class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-lg font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 cursor-pointer transition duration-150">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-emerald-600 text-white p-6 text-center">
+        <p>© 2025 SAFruit spa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
